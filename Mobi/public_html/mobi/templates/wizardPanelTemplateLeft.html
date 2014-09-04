@@ -1,0 +1,41 @@
+<div id="panelWizardPage">
+    <div id="panelWizard" class="panelWizard row">
+        <div class="wizardSteps">
+            <div class="list-group iconFontes col-lg-3 ">
+                <a class="list-group-item" href="" ng-repeat="pane in panes" ng-class="{active:pane.selected}">
+                    {{pane.paneltitle}}
+                </a>
+            </div>
+        </div>
+
+        <div id="progressBar" class="progress progress-striped active">
+            <div 
+                class="progress-bar progress-bar-warning col-lg-9"  
+                role="progressbar" 
+                aria-valuenow="45" 
+                aria-valuemin="0" 
+                aria-valuemax="100">
+                <span class="sr-only">100% Complete</span>
+            </div>
+        </div>
+
+        <div class="navigationStepWizard col-lg-9">
+            <button id="backStep"
+                    class="iconFontes left backStep btn-lg btn-warning" ng-click="backStep()">
+                <span class="icon-arrow-left"></span>  Voltar
+            </button>
+            <button id="nextStep"
+                    class="iconFontes right nextStep btn-lg btn-warning" ng-click="nextStep()">
+                Proximo <span class="icon-arrow-right"></span>
+            </button>
+        </div>
+
+        <div class="tabContent col-lg-9 col-md-offset-3 transcludeContainer">
+
+        </div>
+        <div id="alertRequired"
+             class="alert alert-danger col-lg-6 icon-spam col-lg-offset-3 ui-hidden">
+            &emsp;Preencha todos os campos obrigatorios.
+        </div>
+    </div>
+</div>
